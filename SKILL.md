@@ -18,10 +18,23 @@ The source plugin is in `assets/youngcart5-growth-plugin/` and includes:
 
 ## Fast Workflow
 
+Use the skill when the user asks to package, install, deploy, inspect, customize, or migrate this Growth plugin.
+
+Example prompts:
+
+```text
+Use $youngcart-growth-plugin to package and install the Growth payment-promotion plugin.
+영카트5 Growth 플러그인 배포 ZIP을 만들어.
+영카트5 루트에 Growth 플러그인을 설치해.
+Growth 플러그인을 그누보드7 플러그인 구조로 마이그레이션해.
+```
+
 1. For direct YoungCart5 deployment, copy `assets/youngcart5-growth-plugin/extend` and `assets/youngcart5-growth-plugin/plugin` into the target G5 root.
-2. For a release artifact, run `scripts/package-growth-plugin.sh`.
+2. For a release artifact, run `scripts/package-growth-plugin.sh`; the output is `dist/youngcart5-growth-plugin.zip`.
 3. For local installation into a mounted G5 root, run `scripts/install-g5-growth-plugin.sh /path/to/gnuboard5`.
 4. For G7 migration, preserve the plugin behavior but replace G5 `add_event('tail_sub', ...)` and custom DB table setup with G7 plugin metadata, settings, assets, and layout-extension injection.
+
+The GitHub-facing README at `README.md` includes end-user install notes and Codex skill usage. Keep the bundled plugin README at `assets/youngcart5-growth-plugin/README.md` focused on the deployable G5 plugin artifact.
 
 ## Direct Deployment Rules
 
