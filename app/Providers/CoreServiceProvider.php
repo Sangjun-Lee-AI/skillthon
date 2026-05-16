@@ -306,8 +306,8 @@ class CoreServiceProvider extends ServiceProvider
                 $username = $config['read']['username'];
             }
 
-            // root 사용자 또는 빈 username인 경우 무효
-            if (empty($username) || $username === 'root') {
+            // root 사용자 또는 빈 username인 경우 무효 (로컬 환경 제외)
+            if (empty($username) || ($username === 'root' && ! app()->environment('local'))) {
                 return false;
             }
 

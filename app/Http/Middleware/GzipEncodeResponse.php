@@ -55,6 +55,11 @@ class GzipEncodeResponse
     {
         $response = $next($request);
 
+        // PHP 내장 서버에서는 gzip 비활성화
+        if (php_sapi_name() === 'cli-server') {
+            return $response;
+        }
+
         // 압축 조건 확인
         if (! $this->shouldCompress($request, $response)) {
             return $response;
