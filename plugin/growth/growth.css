@@ -1,0 +1,37 @@
+/* Growth Plugin Styles */
+@keyframes growthBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+.growth-balloon { transition: all 0.3s ease; pointer-events: none; }
+.growth-bounce { animation: growthBounce 1.2s ease-in-out infinite; }
+
+/* Payment vertical layout */
+.growth-vertical-layout .lb_icon {
+    display: block !important;
+    float: none !important;
+    width: 100% !important;
+    height: 60px !important;
+    position: relative !important;
+    padding-left: 65px !important;
+    padding-top: 20px !important;
+    border: 1px solid #eceff4 !important;
+    margin: -1px 0 0 0 !important;
+    cursor: pointer;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+.growth-badge {
+    display: inline-block;
+    color: #fff;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 2px 8px;
+    border-radius: 10px;
+    position: absolute !important;
+    right: 15px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    left: auto !important;
+}
