@@ -1,0 +1,6 @@
+interface:
+  display_name: "YoungCart Growth Plugin"
+  short_description: "Deploy or migrate the Growth checkout plugin"
+  default_prompt: "Use $youngcart-growth-plugin to package and install the Growth payment-promotion plugin."
+policy:
+  allow_implicit_invocation: true
